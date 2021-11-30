@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    
+    <script type="text/javascript" src="App.js"></script>
+    <script type="text/javascript" src="Tools.js"></script>
+    
+    
+    <title>Swap</title>
+
+
+
+</head>
+
+<body onload="main();">
+    
+    <button type="button" onclick="connectWeb3();" class="ConnectWalletButton ButtonText ConnectButton">Connect Wallet</button>
+    
+    
+    <div class="SwapOuterArea">
+
+        <swapTitle>Exchange</swapTitle>
+        
+        
+
+        
+        <div class="SwapContainer">
+            
+            <div class="PrimaryInputs">
+                <swapInfo0>Input</swapInfo0>
+                <swapInfo1 id="Balance_0" onclick="setMaxBalance(0);">Balance: 0</swapInfo1>
+           </div>
+  
+            <div class="PrimaryInputs" id="InputField_0">
+                
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        <div class="SwapContainer">
+            
+            <div class="PrimaryInputs">
+                <swapInfo0>Output</swapInfo0>
+                <swapInfo1 id="Balance_1" onclick="setMaxBalance(1);">Balance: 0</swapInfo1>
+           </div>
+  
+            <div class="PrimaryInputs" id="InputField_1">
+                    
+            </div>
+            
+        </div>
+        
+        <button type="button" onclick="callSwap(this);" class="SwapButton ButtonText Swap">No wallet connected</button>
+
+    </div>
+
+    <div class="TokenSelectorContainer" id="TokenSelectorWindow" style="display: none;">
+        <div class="TokenSelectorOuterArea">
+           <div class="tokenSelectorHeaderBar">
+              <tokenSelectorHeader>Select a Token</tokenSelectorHeader>
+              <div class="CloseTabX" onclick="changeTokenSelectorVisibility()">x</div>
+            </div>
+           
+           
+           <input type="text" id="adress_input" class="AdressInputField" oninput="findClosestAdressMatch();" placeholder="Search name or address"/>
+           
+           
+           <div class="SelectableTokens" id="SelectableTokensContainer">
+               
+      
+               
+               
+               
+           </div>
+           
+           <div class="TokenSelectorFooter">
+               
+           </div>
+           
+           
+           
+        </div>     
+    </div>
+
+
+
+
+
+</body>
+
+</html>

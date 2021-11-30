@@ -1,0 +1,17 @@
+Bugs:
+
+All {var accounts = await web3.eth.getAccounts()}  return the wrong address   -> web3 might connects to the wrong test net
+-------------------------------------------------------------
+
+
+Todo:
+- Add an ABI link fetcher when a new tokens gets selected
+- Get the liquidity of the tokens to calculate price impact (Add indicator at the bottom of the swap)
+- Make the tokens that are already selected in one swap tab,     gray and not selectable
+
+
+- onSelectToken() function currently sets symbol and name the same value (line 246,247)
+- Save last used token address in the cookies, could use json or an array
+
+- In the Select token window the x to close the tab should be replaced by an image
+
